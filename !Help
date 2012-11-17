@@ -1,0 +1,3 @@
+Run <Obey$Dir>.!Boot
+|
+IF "<Alias$@RunType_3d6>" = "" then Filer_Run RiscMovieRes:TextManual else Filer_Run RiscMovieRes:RiscMovie

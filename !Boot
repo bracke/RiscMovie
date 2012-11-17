@@ -1,0 +1,16 @@
+Set Dummy$Path <Obey$Dir>.Resources.
+Run Dummy:ResFind RiscMovie
+Unset Dummy$Path
+|
+Set RiscMovie$Help "RiscMovieRes:RiscMovie"
+Set RiscMovie$Version "X.XX"
+Set RiscMovie$Web "http://www.arcsite.de/hp/bracke/"
+Set RiscMovie$Title "RiscMovie"
+Set RiscMovie$Publisher "Bent Bracke"
+Set RiscMovie$Description "Keep track of your movie collection"
+Run <RiscMovie$Dir>.Resources.ReadToken RiscMovieRes:Messages DESCRIPTION
+do Set RiscMovie$Description <ReadToken$Value>
+|
+Set File$Type_1bc Movies
+Set Alias$@RunType_1bc Run <RiscMovie$Dir>.!Run %%*0
+<RiscMovie$Dir>.IconSprite

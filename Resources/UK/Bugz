@@ -1,0 +1,82 @@
+# This is a Bugz description file
+[*Title]
+Drone
+
+[*Info]
+Program: RiscMovie
+Distribution: Public
+Version:1.00 (2005-05-22)
+Release: Full public release
+
+[*Mail]
+bbracke@web.de
+
+[*Cat]
+
+
+[*Modules]
+AcornURI
+WindowManager
+MessageTrans
+Toolbox
+Window
+IconBar
+Menu
+ProgInfo
+Scale
+SaveAs
+FileInfo
+ToolAction
+ColourDBox
+ColourMenu
+DCS
+FontDBox
+FontMenu
+PrintDBox
+TextGadgets
+StrongHelp
+
+[*Show]
+RiscMovie$Dir
+RiscMovieRes$Path
+RiscMovieResources$Dir
+RiscMovieResourcesRes$Path
+CCres$Dir
+Bugz$Dir
+Choices$Dir
+Choices$Path
+Choices$Write
+Wimp$ScrapDir
+StrongHelp$Dir
+ConfiX$Dir
+RiscMovie$Help
+RiscMovie$Version
+RiscMovie$Web
+RiscMovie$Title
+RiscMovie$Publisher
+RiscMovie$Description
+
+[*Cat]
+Please submit as much information about what you were doing, what went
+right and what went wrong.
+
+[Iconbar menu]
+Please write in which submenu the problem occured and if you selected
+any menu entry then please write whether you did that using the mouse or
+with a keyboard shortcut.
+
+[Configuration]
+RiscMovie uses ConfiX for configuration purposes. If you have any problems
+with it then please read the ConfiX manual before filing a bug report.
+Please describe how you opened the configuration window and what went
+wrong. Please include any error message you have encountered.
+
+[Bug reporting]
+If you have problems using Bugz then please consider whether this is
+caused by RiscMovie or by Bugz.
+
+[Manual]
+Please write down any mistake you find in the manual, including spelling
+errors and omissions.
+
+

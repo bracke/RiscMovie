@@ -1,0 +1,80 @@
+# StrongEd$Mode=Message
+_TaskName:RiscMovie
+VERS:1.00 (2005-05-22)
+# Obey file error messages
+RESERR:Message from RiscMovie
+DESCRIPTION:Keep track of your movie collection
+RO:RiscMovie needs RISC OS 3 or later.
+TASKEXIST:You can only have one copy of RiscMovie running at once.
+NESTED:RiscMovie requires the Nested Window Manager. This can be obtained by downloading the Universal Boot sequence from http://acorn.riscos.com/
+MODCLIB:You need the SharedCLibrary to run RiscMovie.
+MODTB:You need 'Toolbox' module (v1.71) to run RiscMovie.
+MODCM:You need the 'ColourMenu' module (v0.24) to run RiscMovie.
+MODCD:You need the 'ColourDBox' module (v0.23) to run RiscMovie.
+MODDCS:You need the 'DCS' module (v1.16) to run RiscMovie.
+MODFI:You need the 'FileInfo' module (v0.22) to run RiscMovie.
+MODFB:You need the 'FontDBox' module (v0.22) to run RiscMovie.
+MODFM:You need the 'FontMenu' module (v0.27) to run RiscMovie.
+MODIB:You need the 'IconBar' module (v1.22) to run RiscMovie.
+MODMU:You need the 'Menu' module (v0.40) to run RiscMovie.
+MODPT:You need the 'PrintDBox' module (v0.20) to run RiscMovie.
+MODPI:You need the 'ProgInfo' module (v0.20) to run RiscMovie.
+MODSAVE:You need the 'SaveAs' module (v0.22) to run RiscMovie.
+MODSC:You need the 'Scale' module (v0.19) to run RiscMovie.
+MODWD:You need the 'Window' module (v1.79) to run RiscMovie.
+MODTA:You need the 'ToolAction' module (v0.23) to run RiscMovie.
+MODTG:You need the 'TextGadgets' module (v0.49) to run RiscMovie.
+MODURI:You need the 'URI' module to run RiscMovie.
+MODTW:You need the taskwindow module to run RiscMovie.
+# Error messages
+OVERWRITEBUTTON:Overwrite
+OVERWRITEMODE:There is already a file with that name.
+CHOICES:Error reading choices. %0
+CONFIGURE:Error running !Configure. %0
+UNTRAPPED:Untrapped exception. %0
+CONFIX:ConfiX cannot be found. Please make sure the filer has seen it before running RiscMovie.
+BUGZQUERY:Error answering a query from Bugz. %0
+BUGZCREATE:Error creating Bugz report. %0
+NOBUGZ:Please locate the Bugz application. %0
+TOOLBOXERROR:Error processing Toolbox Error. %0
+HOMEPAGE:Error viewing Homepage. %0
+SENDEMAIL:Error sending E-Mail. %0
+MQUIT:Error receiving 'Quit' Message. %0
+TQUIT:Error receiving Toolbox 'Quit' Message. %0
+VIEWMANUAL:Error opening Manual. %0
+VIEWIHELP:Error running starting interactive help. %0
+VIEWCHAPTER:Error opening chapter in manual. %0
+#
+UNTITLED:Untitled
+DELENTRY:Do you really want to delete the selected movie(s) ?
+DELBUTTON:Delete
+NORESULT:No matching movies were found.
+NODUBLETTE:No dublettes were located.
+HANDLE_FIND:An error has occured during the search - %0
+HANDLE_DUBLETTE:Error during dublette search - %0
+HAND_SORT:Error during sort - %0
+HANDLE_NEWLIST:Error while creating a new list - %0
+HANDLE_DCSDISCARD:Error after DCS discard - %0
+HANDLE_DCSSAVE:Error after DCS Save - %0
+HANDLE_DCSCANCEL:Error after DCS cancel - %0
+HANDLE_READERROR:Error reading file - %0
+HANDLE_SCROLLIST:Error after scrolllist selection - %0
+HANDLE_SAVETOFILE:Error during 'save_to_file' - %0
+HANDLE_SAVECOMPLETED:Error during 'save_completed' - %0
+HANDLE_CLOSEWINDOW:Error closing window - %0
+HANDLE_MENUSELECTION:Error during menu selection - %0
+HANDLE_HIDEWINDOW:Error hiding window - %0
+HANDLE_SHOWSAVEAS:Error showing SaveAs - %0
+HANDLE_SHOWWINDOW:Error showing window - %0
+HANDLE_SHOWFILEINFO:Error showing FileInfo window - %0
+HANDLE_REMOVEITEM:Error deleting movie - %0
+HANDLE_ADDITEM:Error while adding movie - %0
+HANDLE_EDITITEM:Error while editing movie - %0
+HANDLE_OADDITEM:Error while opening 'Add Movie' window - %0
+HANDLE_CHANGEITEM:Error while changing movie - %0
+HANDLE_PREQUIT:Error while handling prequit message.
+HANDLE_CSVREAD:Error while reading CSV.
+HANDLE_SAVECSV:Error while saving CSV.
+NOCHOICES:Choices could not be found.
+PROGRESS_HEADER:Reading file...
+BADDATA:Some inconsistent data has been discarded.

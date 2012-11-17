@@ -1,0 +1,284 @@
+| RiscMovie Configure definitions
+
+Title = RiscMovie
+Width = 900
+Height = 350
+CheckVersion = 0.46
+File = <Choices$Write>.RiscMovie.Choices
+Separator = :
+Remark = #
+Boolean = 2
+
+[Menu]
+
+Icon = menu
+Text = Menu Inhalt
+Width = 220
+
+{
+ Name = CATEGORY
+ Text = Genren
+ Type = String
+ Default = Action,Kinderfilm,Docu,Drama,Verarschung,Kriminal,Kriegsfilm,Liebesfilm,Monumental,Science Fiction,Horror,Splatter,Zeichentrick,Thriller,Western,Unbekannt
+ Help = Genren
+}
+
+{
+ Name = MEDIA
+ Text = Medien
+ Type = String
+ Default = DVD,DVD-RAM,Video-CD,Video,E60,E120,E180,E210,E240,E300,
+ Help = Medien
+}
+
+{
+ Name = LANGUAGE
+ Text = Sprachen
+ Type = String
+ Default = Deutsch,Englisch
+ Help = Sprachen
+}
+
+{
+ Name = SUBTITLES
+ Text = Untertitel
+ Type = String
+ Default = Deutsch,Englisch
+ Help = Untertitel
+}
+
+[Liste]
+
+Icon = liste
+Text = Liste - Inhalt
+Width = 220
+
+
+[Liste,1-3]
+
+Icon = 1-3
+Text = Spalten 1-3
+Width = 220
+
+{
+ Name = COLUMN1
+ Text = Anzeigen
+ Type = Option
+ Default = On
+ Help = Diese Spalte anzeigen.
+}
+{
+ Name = HEADING1
+ Text = Überschrift
+ Type = String
+ Width = 220
+ Default = Titel 1
+ Enable = COLUMN1,1
+ Help = Überschrift für diese Spalte.
+};
+{
+ Name = CONTENT1
+ Text = Inhalt
+ Width = 220
+ Type = Menu
+ Menu = Inhalt;Erster Titel,0;Zweiter Titel,1;Dritter Titel,2;Genre,3;Medium,4;Sprachen,5;Untertitel,6;Notizen,7
+ Enable = COLUMN1,1
+ Default = 0
+}
+
+{
+ Name = COLUMN2
+ Text = Anzeigen
+ Type = Option
+ Default = On
+ Help = Diese Spalte anzeigen.
+}
+{
+ Name = HEADING2
+ Text = Überschrift
+ Type = String
+ Width = 220
+ Default = Titel 2
+ Enable = COLUMN2,1
+ Help = Überschrift für diese Spalte.
+};
+{
+ Name = CONTENT2
+ Text = Inhalt
+ Type = Menu
+ Width = 220
+ Menu = Inhalt;Erster Titel,0;Zweiter Titel,1;Dritter Titel,2;Genre,3;Medium,4;Sprachen,5;Untertitel,6;Notizen,7
+ Enable = COLUMN2,1
+ Default = 1
+}
+
+
+{
+ Name = COLUMN3
+ Text = Anzeigen
+ Type = Option
+ Default = On
+ Help = Diese Spalte anzeigen.
+}
+{
+ Name = HEADING3
+ Text = Überschrift
+ Type = String
+ Width = 220
+ Default = Titel 3
+ Enable = COLUMN3,1
+ Help = Überschrift für diese Spalte.
+};
+{
+ Name = CONTENT3
+ Text = Inhalt
+ Type = Menu
+ Width = 220
+ Menu = Inhalt;Erster Titel,0;Zweiter Titel,1;Dritter Titel,2;Genre,3;Medium,4;Sprachen,5;Untertitel,6;Notizen,7
+ Enable = COLUMN3,1
+ Default = 2
+}
+
+[Liste,4-6]
+
+Icon = 4-6
+Text = Spalten 4-6
+Width = 220
+
+{
+ Name = COLUMN4
+ Text = Anzeigen
+ Type = Option
+ Default = On
+ Help = Diese Spalte anzeigen.
+}
+{
+ Name = HEADING4
+ Text = Überschrift
+ Type = String
+ Width = 220
+ Default = Genre
+ Enable = COLUMN4,1
+ Help = Überschrift für diese Spalte.
+};
+{
+ Name = CONTENT4
+ Text = Inhalt
+ Type = Menu
+ Width = 220
+ Menu = Inhalt;Erster Titel,0;Zweiter Titel,1;Dritter Titel,2;Genre,3;Medium,4;Sprachen,5;Untertitel,6;Notizen,7
+ Enable = COLUMN4,1
+ Default = 3
+}
+
+
+{
+ Name = COLUMN5
+ Text = Anzeigen
+ Type = Option
+ Default = On
+ Help = Diese Spalte anzeigen.
+}
+{
+ Name = HEADING5
+ Text = Überschrift
+ Type = String
+ Width = 220
+ Default = Medium
+ Enable = COLUMN5,1
+ Help = Überschrift für diese Spalte.
+};
+{
+ Name = CONTENT5
+ Text = Inhalt
+ Type = Menu
+ Width = 220
+ Menu = Inhalt;Erster Titel,0;Zweiter Titel,1;Dritter Titel,2;Genre,3;Medium,4;Sprachen,5;Untertitel,6;Notizen,7
+ Enable = COLUMN5,1
+ Default = 4
+}
+
+
+{
+ Name = COLUMN6
+ Text = Anzeigen
+ Type = Option
+ Default = On
+ Help = Diese Spalte anzeigen.
+}
+{
+ Name = HEADING6
+ Text = Überschrift
+ Type = String
+ Width = 220
+ Default = Sprachen
+ Enable = COLUMN6,1
+ Help = Überschrift für diese Spalte.
+};
+{
+ Name = CONTENT6
+ Text = Inhalt
+ Type = Menu
+ Width = 220
+ Menu = Inhalt;Erster Titel,0;Zweiter Titel,1;Dritter Titel,2;Genre,3;Medium,4;Sprachen,5;Untertitel,6;Notizen,7
+ Enable = COLUMN6,1
+ Default = 5
+}
+
+[Liste,7-8]
+
+Icon = 7-8
+Text = Spalten 7-8
+Width = 220
+
+{
+ Name = COLUMN7
+ Text = Anzeigen
+ Type = Option
+ Default = On
+ Help = Diese Spalte anzeigen.
+}
+{
+ Name = HEADING7
+ Text = Überschrift
+ Type = String
+ Width = 220
+ Default = Untertitel
+ Enable = COLUMN7,1
+ Help = Überschrift für diese Spalte.
+};
+{
+ Name = CONTENT7
+ Text = Inhalt
+ Type = Menu
+ Width = 220
+ Menu = Inhalt;Erster Titel,0;Zweiter Titel,1;Dritter Titel,2;Genre,3;Medium,4;Sprachen,5;Untertitel,6;Notizen,7
+ Enable = COLUMN7,1
+ Default = 6
+}
+
+{
+ Name = COLUMN8
+ Text = Anzeigen
+ Type = Option
+ Default = On
+ Help = Diese Spalte anzeigen.
+}
+{
+ Name = HEADING8
+ Text = Überschrift
+ Type = String
+ Width = 220
+ Default = Untertitel
+ Enable = COLUMN8,1
+ Help = Überschrift für diese Spalte.
+};
+{
+ Name = CONTENT8
+ Text = Inhalt
+ Type = Menu
+ Width = 220
+ Menu = Inhalt;Erster Titel,0;Zweiter Titel,1;Dritter Titel,2;Genre,3;Medium,4;Sprachen,5;Untertitel,6;Notizen,7
+ Enable = COLUMN8,1
+ Default = 7
+}

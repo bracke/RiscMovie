@@ -1,0 +1,159 @@
+ResFind 2.00 Programmer's Documentation
+Date: 01-Nov-1992
+
+
+Copyright:
+==========
+
+ResFind is copyrighted ©1992
+Olaf Krumnow & Herbert zur Nedden
+German Archimedes Group (GAG)
+
+This program is FREEWARE and may be used by anyone who wants to in any application - even in commercial ones as long as our copyright is stated in the !Help file or !Help application including our adresses and the compressed version of ResFind (i.e. not ResFindSrc) is included in
+the application. Furthermore ResFind should be described in the application's documentation - an example for this is at the bottom of this file.
+
+It is not permitted to remove and files from THIS ARCHIVE. We would very much appreciate translations into other languages being added, though. Exception: you may pass ResFind on in the way stated in the paragraph above.
+
+We would very much appreciate you distributing the complete ResFind source and documentation since some standard way of enabling applications to run in different languages is lacking at the time being.
+
+
+Authors:
+========
+
+Olaf Krumnow                     Herbert zur Nedden
+August-Bebel-Strasse 102c        Alte Landstraﬂe 21
+W-2050 Hamburg 80                W-2071 Siek
+Germany                          Germany
+(+49 40) 7 21 92 87              (+49 41 07) 99 00
+
+   email: ECOMM-II Hamburg  (+49 40) 7 15 88 29 (FIDO, Netmails)
+          ArcPool Wolfsburg (+49 53 62) 6 47 05 (FIDO)
+
+
+What is ResFind?
+================
+
+Acorn supports multilingual progamming by the MSGTRANS module. Quite a few programmes use it for the messages of their programs. There are even several (british) programs having messages in other languages than English (mainly in German). Despite this I know of only one application (except those using ResFind) adapting to the configured language automatically - Impression.
+For the end user this can't be considered the way to go since he or she has to do some work to activate the messages in the right language - even if the language is supported.
+Here ResFind comes in. It tries to activate the language fitting best. ResFind certainly isn't clairvoyant but on a reasonably configured computer it should work just fine.
+
+
+How does it work?
+=================
+
+As a prerequisite all language dependant resources, i.e. not only the messages but also the templates and perhaps even sprites and certainly the documentation have to be stored in directories reflecting the languages. For this purpose a directory named 'Resources' should reside in the application and in there one subdirectory per language supported, named the same way as the corresponding lanugage used to configure the computer. Inside these language directories should then be the messages, templates and so on. In order to add another language all to be done is to add another of these language directories.
+According to Acorn (BBC Acorn User Show '92) these language directories should to reside inside the application directory, i.e. not inside the Resources directory which we consider less clear. Unfortunately Acorn didn't make this known and didn't even use it in their own applications. Nevertheless ResFind can handle a missing Resources directory in the application and will then look for the language directories in the application itself.
+
+Users not knowing anything of ResFind will automatically get the configured language. If this language is not supported by the application in question UK will be used (this shows that UK should be supported for the program to be operable). In the case that the user knows ResFind (the documentation of the program should tell about it), he/she has further options by defining the system variables 'ResFind$LanguagesPref' and 'ResFind$LanguagesSuff', which should be done in the system's !Boot file. The former contains the languages preferred to the configuered one and the latter those considered better than UK. Take a guy from Norway, for example (that country since lots of good software comes from there), who has configured his computer to 'Norway'. Since his language is comparatively uncommon in the rest of Europe most programs won't support it if they aren't Norwegian. But our user speaks German and French quite well whereas English is not one of his favourites. He thus would rather have the programs run in German or French, if they support it (our support German at the minimum). He thus adds the line 'Set ResFind$LanguagesSuff Germany,France' to his system's !Boot file. (You are not limited to configurable languages. Things like 'Jokie' are possible too.) Now ResFind tries the languages Germany and France and last but not least UK in case the condigured one (Norway) doesn't match, stopping at the first hit. (No languages are checked before the configured one because RefFind$LanguagesPref isn't defined).
+There may be programmers (the RISC Squad semms to belong to them) having a decent sense of humor and thus offering 'translations' with funny messages (like with !FormEd). Or, on the other hand, the preferred language offered by a program isn't good. In these cases it could be the wish of the user that for this application differnt a lanugage is wanted, which is not found using the way outlined above. All to be done is to define a system variable
+for this application called <ApplName$Language> naming the language, where <ApplName> is the name of the application. (This variable can be set in the system's !Boot file or the application's !Run file; I would suggest the former since some authors object to changes being made to their application's files and furthermore you don't have to adapt the !Run file when installing an update.)
+To return to our user. Suppose he has an application called !ModulInfo supporting 'Jokie' as language; all he has to do is to include the line 'Set ModulInfo$Language Jokie' in the !Boot file. Now !ModulInfo will run in Jokie language and all other programs the way stated above.
+To calrify the example: ResFind builds a string of languages looking like this:
+   <ProgName$Language>,<ResFind$LanguagesPref>,<configured language>,<ResFind$LanguagesSuff>,UK
+Thus for our Norwegian user for !ModulInfo the list of languages scanned would be
+   Jokie,Norway,Germany,France,UK
+and for all other programs it would be
+   Norway,Germany,France,UK
+
+
+What does the programmer have to do?
+====================================
+
+To start with, ResFind stets the common variable <ProgName$Dir> to <Obey$Dir>. <ProgName> is the application's name (without the !), extracted by ResFind from <Obey$Dir>. Alternatively ResFind can be called with a parameter which should be done in case the application's name contains 'strange' characters (like in !Spark'em).
+
+ResFind stores the result of it's search in the variable <ProgName>Res$Path. This path variable contains the path to the language directory found as well as to the application itself:
+   <ProgName$Dir>.Resources.<language found>.,<ProgName$Dir>.
+(If the Resources directory isn't present, the path will be <ProgName$Dir>.<language found>.,<ProgName$Dir>.; should no language be found the path set is just <ProgName$Dir>.)
+
+Using the path ProgNameRes: the program can access the resources in the language the end user wants. Due to the second part of this path even the language independant resources can be accessed using this path.
+
+A few BASIC examples:
+
+Reading Templates:
+
+   SYS "Wimp_OpenTemplate",,"ProgNameRes:Templates"   : REM open templates file
+   SYS "Wimp_LoadTemplate",....                       : REM load template definition
+   [... load how much you need ...]
+   SYS "Wimp_CloseTemplate"                           : REM close templates file
+
+Loading Messages:
+
+   SYS "MessageTrans_OpenFile",data%,"ProgNameRes:Messages",buffer%
+
+
+Our GAG-BASIC-Libraries do it this way (to be precise need the path variable) in order to support ResFind.
+
+While developing the application it isn't necessary to build the directory structure. All resources can be put inside the application instead which makes changes to these files easier. But before passing the program on to others the Resources directory with the language directories inside sould be created. For testing the easiest way to go is to configure the computer to some other language (e.g. COUNTYR GERMANY). If the application is run afterwards ResFind will look for that lanugage. Changing the county after starting the program certainly has no effect.
+
+To enable the end user to cusomise the application ResFind should be explained in the application's documentation (samle see below). With a normal configuration of the computer the application should run in a correct language without the end user to have to do anything but run it.
+
+ResFind has to be called some time so that it can set the path variable. To reflect changes the user does the place to call ResFind is the !Run file. To save space on the disc ResFind should be searched in the Resources directory as well as in the system's Library, thus e.g. this way:
+
+   Set Dummy$Path <Run$Path>,<Obey$Dir>.Resources.
+   Run Dummy:ResFind ProgName
+   Unset Dummy$Path
+
+First a new path variable (Dummy$Path) is set. With this ResFind is searched along the RunPath and then in the Resources directory and then started with the applications name as parameter. Afterwards the dummy path variable is deleted.
+
+A !Run file (here the one from !ModulInfo) can look like this:
+
+   |
+   | !Run file for !ModulInfo
+   |
+   IconSprites <Obey$Dir>.!Sprites
+   WimpSlot -min 64k -max 64k
+   Set Dummy$Path <Run$Path>,<Obey$Dir>.Resources
+   Run Dummy:ResFind ModulInfo
+   Unset Dummy$Path
+   RMEnsure MessageTrans 0.06 RMLoad <ModulInfo$Dir>.Modules.MsgTrans
+   RMensure MessageTrans 0.06 RMLoad System:Modules.MsgTrans
+   RMEnsure MessageTrans 0.06 Error 0 ModulInfo needs at least MessageTrans 0.06
+   RMEnsure InterfaceManager 2.00 RMLoad <ModulInfo$Dir>.Modules.interface
+   RMensure InterfaceManager 2.00 RMLoad System:Modules.interface
+   RMEnsure InterfaceManager 2.00 Error 0 ModulInfo needs at least InterfaceManager 2.00
+   WimpSlot -min 64k -max 64k
+   Run <ModulInfo$Dir>.!RunImage
+
+
+The !Help file should be an obey file running the help text in the corresponding language too, thus
+
+   Set Dummy$Path <Run$Path>,<Obey$Dir>.Resources
+   Run Dummy:ResFind ModulInfo
+   Unset Dummy$Path
+   Filer_Run ProgNameRes:Help
+
+Unfortunately Filer_Run is supported as of RISC OS 3.
+The help files shouldn't be calles !Help to make sure that !Help is't started this way over and over again in case no language can be found!
+
+
+Disclaimer:
+===========
+
+The autors are in no way responsible or liable for whatever damages happen when ResFind is used or not used.
+
+
+
+End user documentation
+======================
+
+(Base for the application's documentation - please replace <ProgName> by the name of your application without the !)
+
+!<ProgName> adapts automatically to the configured language if the corresponding messages etc. are available. For this purpose a Resources directory is contained in the application in which a subdirectory for each language supported resides. If the language you need isn't in there, please feel free to duplicate any of these language directories and translate the contents.
+
+When you run the program a utility called ResFind is called which reads the language your computer is configured to and then looks for the corresponding language directory. If this fails the program will run in English (UK). By setting several system variables (best done in your system's !Boot file) you can change the language looked for. With this you can make sure a program runs in a certain language, e.g. to avoid a weird translation. Furthermore it is possible to name several languages you prefer to English.
+This is controlled by three system variables:
+<ProgName>$Language, ResFind$LanguagesPref und ResFind$Languages$Suff.
+When running the application ResFind looks for the first language supported along the following list of languages:
+1. Contents of the variable <ProgName>$Language
+2. Contens of the variable ResFind$LanguagesPref
+3. The configured language
+4. Contens of the variable ResFind$LanguagesSuff
+5. UK
+
+Take a Norwegian user for example (lots of great programs come from there) whose computer is configured to 'Norway'. Since this language isn't too common in Europe most programs won't support it - except for Norwegian ones. But our user is pretty good in German and French but not too fond of English. Therefore he prefers these languages to UK and would thus put the following line in his system's !Boot file:
+*Set ResFind$LanguagesSuff Germany,France
+Running an applications (such as this one) using ResFind the list of languages looked for is 'Norway,Germany,France,UK'.
+In case this user hat an application calles !Pete supporting the languate 'Humorous' the line
+*Set Pete$Language Humor
+in the !Boot file makes sure !Pete will run humorous.
+

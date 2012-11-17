@@ -1,0 +1,77 @@
+# This is a Bugz description file
+[*Title]
+RiscMovie
+
+[*Info]
+Program: RiscMovie
+Distribution: Ohne Einschränkung
+Version:1.00 (2005-05-22)
+Release: Volles Öffentliches Release
+
+[*Mail]
+bbracke@web.de
+
+[*Cat]
+
+
+[*Modules]
+AcornURI
+WindowManager
+MessageTrans
+Toolbox
+Window
+IconBar
+Menu
+ProgInfo
+Scale
+SaveAs
+FileInfo
+ToolAction
+ColourDBox
+ColourMenu
+DCS
+FontDBox
+FontMenu
+PrintDBox
+TextGadgets
+StrongHelp
+
+[*Show]
+RiscMovie$Dir
+RiscMovieRes$Path
+Choices$Dir
+Choices$Path
+Choices$Write
+Wimp$ScrapDir
+StrongHelp$Dir
+ConfiX$Dir
+RiscMovie$Help
+RiscMovie$Version
+RiscMovie$Web
+RiscMovie$Title
+RiscMovie$Publisher
+RiscMovie$Description
+
+[*Cat]
+Bitte den Fehler und die Umstände so genau wie möglich beschreiben.
+
+[Symbolleisten Menü]
+Bitte angeben in welchem Untermenü der Fehler aufgetreten ist und falls
+eine Menüpunkt gewählt wurde dann bitte auch angeben ob das per Maus
+oder Tastaturkürzel geschah.
+
+
+[Konfiguration]
+Für die Konfiguration wird die Applikation ConfiX verwendet. Falls damit
+Probleme auftreten dann lesen Sie bitte das ConfiX Handbuch bevor Sie
+eine Fehlermeldung schreiben. Bitte beschreiben Sie in der Fehlermeldung
+wie Sie das Konfigurationsfenster geöffnet haben und welche Probleme
+auftraten.
+
+[Fehlermeldung - Bugz]
+Bei Problemen mit dem erstellen von Fehlermeldungen beachten Sie bitte
+das das Problem auch bei der Bugz Applikation liegen kann.
+
+[Handbuch]
+Bitte jeden Fehler im Handbuch melden - auch sprachliche und
+grammatische Fehler.

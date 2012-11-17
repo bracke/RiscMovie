@@ -1,0 +1,455 @@
+                                   RiscMovie
+                                   ~~~~~~~~~
+
+
+        RiscMovie
+        Version 1.00 (2005-05-22)
+        ----------------------------------------------------------------------
+    è   Introduction  è Reporting Bugs
+    è   Installation  è Language      
+    è   Starting      è History       
+    è   Shortcuts     è Credits       
+    è   Problems      è License       
+
+    è   Content
+    è   Index
+    è   Textmanual
+  ----------------------------------------------------------------------------
+  Email (bbracke@web.de)
+  Webpage
+  ============================================================================
+
+                                   Introduction
+                                   ~~~~~~~~~~~~
+    --------------------------------------------------------------------------
+          This manual assumes you are familiar with the RISC OS desktop. You
+          may want to read the Welcome Guide and the User Guide#url
+          http://acorn.riscos.com/riscos3/37/37DiscImage/Manuals/Manual/BOOKB/
+          BOOK_3.HTM> that come with your RISC OS system.
+          You may also want to read this introduction to RISC OS.
+    --------------------------------------------------------------------------
+    RiscMovie keeps track of your movie collection. For each movie you can
+    set the genre, mediatype, audio tracks and subtitles. Each movie can have
+    up to 3 titles (e.g. original and English).
+
+    Multiple lists can be open at the same time and lists can be sorted and
+    searched.
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+                                   Installation
+                                   ~~~~~~~~~~~~
+    --------------------------------------------------------------------------
+      è   Download the program.
+      è   The program is compressed into a Zip archive. Decompress it using
+          e.g. SparkFS or Sparkplug#URL
+          http://pilling.users.netlink.co.uk/free.html>.
+      è   Copy the decompressed application, and any other files in the
+          archive, to a place on your harddisc.
+      è   That is it - you have installed RiscMovie.
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+                                     Starting
+                                     ~~~~~~~~
+    --------------------------------------------------------------------------
+          Use the interactive help to get help on specific icons and
+          menuitems.
+    --------------------------------------------------------------------------
+    Starting
+
+                                                                        Page 1
+    Doubleclick on the RiscMovie icon in the filer window to start RiscMovie.
+    This will put an icon on the iconbar.
+
+    Quit
+    Select the Quit entry in iconbarmenu to quit RiscMovie. The ^Q shortcut
+    also quits RiscMovie. If there is any data which has not been saved then
+    RiscMovie will prompt you for confirmation.
+
+    Creating a collection
+    SELECT clicking on the iconbaricon will create a new collection and open
+    a window showing that collection. From this window you can add and remove
+    movies.
+
+    Dragging an existing collection onto the iconbar icon will load it and
+    display it in a new window.
+
+    Configuration
+    RiscMovie uses ConfiX to handle the configuration. For this to work the
+    filer needs to have seen ConfiX. If you have installed ConfiX in
+    !Boot.Resources it will happen automaticly at startup.
+
+    ADJUST clicking on the iconbar icon will open the configuration window.
+    Selecting Preferences in the iconbar menu wil also open the configuration
+    window.
+
+    The settings will only become active when saved. 
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+                                    Shortcuts
+                                    ~~~~~~~~~
+    --------------------------------------------------------------------------
+        F1   Shows the manual.
+    shift    F1   Opens the FileInfo window.
+    control  F1   Runs the interactive help.
+
+        F3   Opens the SaveAs window.
+    shift    F3   Save the file using the same path as last time.
+
+        F4   Opens the Search window.
+    shift    F4   Repeats the previous search.
+
+    control  N    Opens the 'Add Movie' window.
+    control  E    Opens the 'Edit Movie' window.
+    control  X    Deletes the selected movie.
+    control  S    Sorts the list.
+
+    control  A    Selects all movies in the list.
+    control  Z    Removes the selection.
+
+        F2   Creates a new (empty) list.
+    control  Q    Quits RiscMovie.
+    control  P    Shows the configuration window.
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+
+
+
+
+                                                                        Page 2
+                                     Problems
+                                     ~~~~~~~~
+    --------------------------------------------------------------------------
+          This page contains the solution to a few known problems, if your
+          problem is not mentioned here then please read the page about
+          reporting bugs.
+    --------------------------------------------------------------------------
+    Configuration
+    If you have problems with the configuration then please make sure that
+    you have ConfiX installed and that it has been seen by the filer. Also
+    make sure it is the newest#url http://www.xat.nl/en/riscos/sw/confix/>
+    version of ConfiX.
+
+    Toolbox
+    If you encounter any Toolbox related errors then please ensure that you
+    have installed the latest available Toolbox modules.
+    Example:
+      The gadget flags have reserved bits set...
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+                                  Reporting Bugs
+                                  ~~~~~~~~~~~~~~
+    --------------------------------------------------------------------------
+         Bugz is an application which gathers information about the computer
+         and allows comments to be added to this information, to make it
+         easier to find the cause of bugs.
+    --------------------------------------------------------------------------
+    RiscMovie supports the use of the Bugz application for bug reporting.
+    Bugz can be downloaded here.
+
+    To report a bug simply choose Create Bug report in the contact submenu of
+    the iconbarmenu. This will (if Bugz could be located by RiscMovie) open a
+    bug report window where you can describe the problem and send the result.
+
+    You may have to configure Bugz to be able to send the report directly. If
+    this does not work, simply choose the Email entry in the contact submenu
+    of the RiscMovie iconbarmenu. This will open an email window. Now save
+    the bug report from the Bugz menu into this window and send the mail.
+
+    If all fails then do simply send me a normal email, but please supply a
+    detailed description of the problem and your system.
+    --------------------------------------------------------------------------
+    Please read this article by Simon Tatham on how to report bugs
+    effectively.
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+                                     Language
+                                     ~~~~~~~~
+    --------------------------------------------------------------------------
+          When you run RiscMovie a utility named ResFind is called which
+          reads the language your computer is configured to and then looks
+          for the corresponding language directory. If this fails the program
+          will run in English (UK).
+
+    This enables RiscMovie to adapt automatically to the configured language
+    if the corresponding resource files are available.
+    For this purpose a Resources directory is contained in the application in
+
+                                                                        Page 3
+    which a subdirectory for each language supported resides. The name of
+    such a subdirectory is determined by the country code.
+
+    If the language you need isn't in there, please feel free to duplicate
+    any of these language directories and translate the contents. If you do
+    so then please send me the translation - it will be included in the next
+    version.
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+                                History of Changes
+                                ~~~~~~~~~~~~~~~~~~
+    --------------------------------------------------------------------------
+    All dates are in the format  yyyy-mm-dd  as defined in the ISO 8601
+    standard.
+    --------------------------------------------------------------------------
+    1.00 (2005-05-22)
+    First version.
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+                                     Credits
+                                     ~~~~~~~
+    --------------------------------------------------------------------------
+    RiscMovie uses a range of third party programs and libraries, they are
+    mentioned here to credit the authors.
+    --------------------------------------------------------------------------
+    MinSlot
+      MinSlot is © Darren Salt. It is available here
+    ResFind
+      ResFind is © Olaf Krumnow & Herbert zur Nedden and is Freeware. What is
+      included here are only the most necessary parts - the full version
+      including a manual is available here#url http://www.gag.de>.
+    ConfiX
+      ConfiX is © Paul Reuvers. It is available here.
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+                                     License
+                                     ~~~~~~~
+    --------------------------------------------------------------------------
+        ß    RiscMovie is Public Domain. So you may use and spread it as much
+             as you like but its still the property of the author: Bent
+             Bracke.
+        ß    If you spread the program you must make sure that it is complete
+             and unaltered. You may adapt the program to your needs but you
+             may only spread the orignal.
+        ß    You may use parts of the code in the RiscMovie runimage in your
+             own programs. Beware: This does not include any third party
+             libraries used by RiscMovie.
+        ß    I accept absolutely no responsibility for any damage done using
+             RiscMovie.
+    --------------------------------------------------------------------------
+                                                                      Previous
+                                                                          Next
+    ==========================================================================
+
+
+                                                                        Page 4
+                                     ResFind
+                                     ~~~~~~~
+    --------------------------------------------------------------------------
+    By setting several system variables (best done in your system's !Boot
+    file) you can change the language looked for. With this you can make sure
+    a program runs in a certain language, e.g. to avoid a weird translation.
+    Furthermore it is possible to name several languages you prefer to
+    English.
+    This is controlled by three system variables:
+
+    RiscMovie$Language, ResFind$LanguagesPref und ResFind$Languages$Suff.
+
+    When running the application ResFind looks for the first language
+    supported along the following list of languages:
+
+      1.  Contents of the variable RiscMovie$Language
+      2.  Contens of the variable ResFind$LanguagesPref
+      3.  The configured language
+      4.  Contens of the variable ResFind$LanguagesSuff
+      5.  UK
+
+    Take a Norwegian user for example (lots of great programs come from
+    there) whose computer is configured to 'Norway'. Since this language
+    isn't too common in Europe most programs won't support it - except for
+    Norwegian ones. But our user is pretty good in German and French but not
+    too fond of English. Therefore he prefers these languages to UK and would
+    thus put the following line in his system's !Boot file:
+
+    *Set ResFind$LanguagesSuff Germany,France
+
+    Running an applications (such as this one) using ResFind the list of
+    languages looked for is 'Norway,Germany,France,UK'. In case this user has
+    an application called !Pete supporting the language 'Humorous' the line
+
+    *Set Pete$Language Humor
+
+    in the !Boot file makes sure !Pete will run humorous.
+    ==========================================================================
+
+                                    Translate
+                                    ~~~~~~~~~
+    --------------------------------------------------------------------------
+    This is a short description on how to translate certain resources into
+    your language.
+    --------------------------------------------------------------------------
+    Messages
+    This can be read with a text editor like Edit or StrongED.
+    Lines starting with a '#' are comments and do not need to be translated.
+    All other lines consist a small piece of text (token) followed by a ':'
+    and some more text.
+    It is the text after the ':' which needs to be translated. Do not change
+    any tokens.
+    If the text contains something like '|M' or '%0' then keep it in place.
+
+    _Config
+    This file defines what the configuration window looks like and can be
+    read with a text editor like Edit or StrongED.
+    In this file you should only translate lines which start with a 'Text ='
+    or 'Help =' and only change the part after the '='.
+
+    Bugz
+    This defines how the Bugz report window looks like and can be read with a
+    text editor like Edit or StrongED.
+
+                                                                        Page 5
+    Text in between '[*' and ']' are section headers. You should translate
+    all sections except 'Title', 'Mail', 'Modules' and 'Show'.
+
+    StrongHelp Manual
+    This can be read with a text editor like Edit or StrongED.
+    Shift click on the manual to open it. Inside are several text files and a
+    few pictures. All text files need to be translated.
+    Lines starting with a '#' are StrongHelp instructions or comments and
+    should not be changed. Text in between '<' and '>' or '{' and '}' should
+    also not be changed. Everything else should be translated.
+
+    TextManual
+    This can be read with a text editor like Edit or StrongED.
+    This contains the same text as the StrongHelp manual but without any
+    StrongHelp codes. Don't translate it manually if you have already
+    translated the StrongHelp manual. Instead use the application StHlp2Text.
+
+    Res
+    You need either ResEd or CCres to translate the text in this file.
+    è   ResEd is commercial and available as part of RISCOS Select and also
+        as part of the C-Compiler suite. An old version is available for free
+        here.
+    è   CCRes is freeware and available here. Use it to convert the Res file
+        to text, translate and then convert the text file back into a Res
+        file using CCres.
+
+    You should translate labels, window titles, menu title, menu entries and
+    help strings.
+
+    Templates
+    You need a template editor like WinEd to edit the template file and
+    should translate labels and window titles.
+    ==========================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                        Page 6
+                                C o n t e n t s
+                                ~~~~~~~~~~~~~~~
+
+
+                            RiscMovie              1
+
+                            Introduction           1
+
+                            Installation           1
+
+                            Starting               1
+
+                            Shortcuts              2
+
+                            Problems               3
+
+                            Reporting Bugs         3
+
+                            Language               3
+
+                            History of Changes     4
+
+                            Credits                4
+
+                            License                4
+
+                            ResFind                5
+
+                            Translate              5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    +----------------------------------------------------------------------+
+    |                                                                      |
+    | This text file was converted from a StrongHelp manual on 22 May 2005 |
+    |                                                                      |
+    |             using !StHlp2Txt version 1.10 (8 June 2001)              |
+    |                           by Chris Morison                           |
+    |                                                                      |
+    |               email: organizer@morison.net                           |
+    |                 web: http://www.organizer.morison.net/               |
+    |                                                                      |
+    +----------------------------------------------------------------------+
+
+                                                                        Page 7

@@ -1,0 +1,68 @@
+# This is a Bugz description file
+[*Title]
+RiscMovie
+
+[*Info]
+Program: RiscMovie
+Distribution: Uden forbehold
+Version:1.00 (2005-05-22)
+Release: Fuldt offentligt release
+
+[*Mail]
+bbracke@web.de
+
+[*Cat]
+
+
+[*Modules]
+AcornURI
+WindowManager
+MessageTrans
+Toolbox
+Window
+IconBar
+Menu
+ProgInfo
+Scale
+SaveAs
+FileInfo
+ToolAction
+ColourDBox
+ColourMenu
+DCS
+FontDBox
+FontMenu
+PrintDBox
+TextGadgets
+StrongHelp
+
+[*Show]
+RiscMovie$Dir
+RiscMovieRes$Path
+Choices$Dir
+Choices$Path
+Choices$Write
+Wimp$ScrapDir
+StrongHelp$Dir
+ConfiX$Dir
+RiscMovie$Help
+RiscMovie$Version
+RiscMovie$Web
+RiscMovie$Title
+RiscMovie$Publisher
+RiscMovie$Description
+
+[*Cat]
+Beskriv venligst fejlen og hvad der førte til fejlen så detaljeret som muligt.
+
+[Ikon menu]
+Angiv i hvilket undermenu fejlen optrådte og hvis du har valgt noget i menuen så skriv hvad du valgte og om du gjorde det med musen eller brugte en genvej. 
+
+[Indstillinger]
+Ved problemer med indstillingerne så angiv hvordan du har åbnet indstillingsvinduet (menu,genvej,musklik) og hvilken fejlmelding du fik.
+
+[Fejl rapport - Bugz]
+Hvis du har problemer med at generere en fejl rapport så husk at det både kan være RiscMovie og Bugz der er skyld i dette.
+
+[Manual]
+Meld alle fejl du finder i manualen - også sproglige.

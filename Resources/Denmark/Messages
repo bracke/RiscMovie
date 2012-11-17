@@ -1,0 +1,80 @@
+# StrongEd$Mode=Message
+_TaskName:RiscMovie
+VERS:1.00 (2005-05-22)
+# Fejl meddelelser til obey filerne
+RESERR:Besked fra RiscMovie
+DESCRIPTION:Holder styr på din filmsamling.
+RO:RiscMovie har brug for RISC OS >3.0.
+TASKEXIST:RiscMovie kører allerede.
+NESTED:Windowmanager modulet er for gammel (< 3.80).
+MODCLIB:Modulet 'SharedCLibrary' er nødvendig for at RiscMovie kan fungere.
+CONFIX:Jeg kunne ikke finde ConfiX. Er det installeret og har filsystemet set det ?
+MODTB:Modulet 'Toolbox' (v1.71) er nødvendig for at RiscMovie kan fungere.
+MODWD:Modulet 'Window' (v1.79) er nødvendig for at RiscMovie kan fungere.
+MODIB:Modulet 'IconBar' (v1.22) er nødvendig for at RiscMovie kan fungere.
+MODMU:Modulet 'Menu' (v0.40) er nødvendig for at RiscMovie kan fungere.
+MODPI:Modulet 'ProgInfo' (v0.20) er nødvendig for at RiscMovie kan fungere.
+MODSC:Modulet 'Scale' (v0.19) er nødvendig for at RiscMovie kan fungere.
+MODSAVE:Modulet 'SaveAs' (v0.22) er nødvendig for at RiscMovie kan fungere.
+MODFI:Modulet 'FileInfo' (v0.22) er nødvendig for at RiscMovie kan fungere.
+MODTA:Modulet 'ToolAction' (v0.23) er nødvendig for at RiscMovie kan fungere.
+MODCD:Modulet 'ColourDBox' (v0.23) er nødvendig for at RiscMovie kan fungere.
+MODCM:Modulet 'ColourMenu' (v0.24) er nødvendig for at RiscMovie kan fungere.
+MODDCS:Modulet 'DCS' (v1.16) er nødvendig for at RiscMovie kan fungere.
+MODFB:Modulet 'FontDBox' (v0.22) er nødvendig for at RiscMovie kan fungere.
+MODFM:Modulet 'FontMenu' (v0.27) er nødvendig for at RiscMovie kan fungere.
+MODPT:Modulet 'PrintDBox' (v0.20) er nødvendig for at RiscMovie kan fungere.
+MODTG:Modulet 'TextGadgets' (v0.49) er nødvendig for at RiscMovie kan fungere.
+MODURI:Modulet 'URI' er nødvendig for at RiscMovie kan fungere.
+MODTW:Taskwindow modulet er nødvendig for at RiscMovie kan fungere.
+# Fejl meddelelser
+OVERWRITEBUTTON:Overskriv
+OVERWRITEMODE:Filen eksisterer allerede - vil du overskrive filen ?
+UNTRAPPED:Ukendt fejl. %0
+CHOICES:Der skete en fejl under indlæsningen af indstillingerne. %0
+CONFIGURE:Der er sket en fejl under forsøget på at starte ConfiX. %0
+TOOLBOXERROR:Der er sket en fejl i toolbox. %0
+BUGZQUERY:Der er sket en fejl under modtagelsen af en besked fra Bugz. %0
+BUGZCREATE:Der er sket en fejl i forbindelse med en besked til Bugz. %0
+NOBUGZ:Jeg kunne ikke finde ConfiX. %0
+HOMEPAGE:Der et sket en fejl under forsøget på at åbne hjemmesiden. %0
+SENDEMAIL:Der er sket en fejl under forsøget på at sende emailen. %0
+MQUIT:Der er sket en fejl ved modtagelsen af 'Quit' beskeden. %0
+TQUIT:Der er sket en fejl ved modtagelsen af toolbox 'Quit' beskeden. %0
+VIEWMANUAL:Der er sket en fejl ved forsøget på at åbne manualen. %0
+VIEWIHELP:Der er sket en fejl ved forsøget på at starte den interaktive hjælp. %0
+VIEWCHAPTER:Der er sket en fejl ved forsøget på at åbne et kapitel i manualen. %0
+#
+UNTITLED:UdenNavn
+DELENTRY:Vil du virkelig slette de(n) markerede film ?
+DELBUTTON:Slet
+NORESULT:Ingen film i listen opfyldte søgekriterierne.
+NODUBLETTE:Der blev ikke fundet nogen doubletter.
+HANDLE_FIND:Der er sket en fejl under søgningen - %0
+HANDLE_DUBLETTE:Der er sket en fejl under sletningen af doubletter - %0
+HAND_SORT:Der er sket en fejl under sorteringen - %0
+HANDLE_NEWLIST:Der er sket en fejl under forsøget på at åbne en ny filmliste. %0
+HANDLE_DCSDISCARD:Fejl efter DCS discard - %0
+HANDLE_DCSSAVE:Fejl efter DCS save - %0
+HANDLE_DCSCANCEL:Fejl efter DCS cancel - %0
+HANDLE_READERROR:Fejl ved indlæsning af fil. %0
+HANDLE_SCROLLIST:Fejl ved scrolllist selektion - %0
+HANDLE_SAVETOFILE:Fejl under 'save_to_file' - %0
+HANDLE_SAVECOMPLETED:Fejl under 'save_completed' - %0
+HANDLE_CLOSEWINDOW:Fejl ved lukning af vindue - %0
+HANDLE_MENUSELECTION:Fejl ved menu valg - %0
+HANDLE_HIDEWINDOW:Fejl efter lukning (hiding) af vindue - %0
+HANDLE_SHOWSAVEAS:Fejl før visning SaveAs vindue - %0
+HANDLE_SHOWWINDOW:Fejl før vising af vindue - %0
+HANDLE_SHOWFILEINFO:Fejl før visning af FileInfo vindue - %0
+HANDLE_REMOVEITEM:Fejl under sletning af markeret film - %0
+HANDLE_ADDITEM:Fejl under tilføjning af film - %0
+HANDLE_EDITITEM:Fejl ved ændring af film - %0
+HANDLE_OADDITEM:Fejl under åbning tilføj film vindue - %0
+HANDLE_CHANGEITEM:Fejl under ændring af film - %0
+HANDLE_PREQUIT:Fejl ved håndtering af 'PreQuit' beskeden - %0.
+HANDLE_CSVREAD:Fejl under forsøg på at læse CSV data - %0.
+HANDLE_SAVECSV:Fejl ved forsøg på skrive CSV data - %0.
+NOCHOICES:Preferencerne blev ikke fundet - %0.
+PROGRESS_HEADER:Indlæser fil...
+BADDATA:Inkonsistent data blev ignoreret.

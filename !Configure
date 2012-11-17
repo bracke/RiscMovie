@@ -1,0 +1,7 @@
+Run <Obey$Dir>.!Boot
+Run <RiscMovie$Dir>.Resources.GetHandle RiscMovie
+|
+If "<ConfiX$Dir>" = "" Then Run <RiscMovie$Dir>.Resources.ReadToken SEDModeRes:Messages CONFIX
+If "<ConfiX$Dir>" = "" Then ERROR 0 <ReadToken$Value>
+|
+do If "<ConfiX$Dir>" <> "" Then Run <ConfiX$Dir> -res <RiscMovie$Dir>.Resources -mes RiscMovieRes:Messages -pos center,center <RiscMovie$Handle>

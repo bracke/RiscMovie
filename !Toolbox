@@ -1,0 +1,61 @@
+|
+| Setup
+|
+Set Alias$RiscMovie_Ensure RMENSURE %%0 %%1 <RiscMovie$Dir>.Resources.IgnoreErr RMLOAD %%2|MRMENSURE %%0 %%1|MRun <RiscMovie$Dir>.Resources.ReadToken RiscMovieRes:Messages %3 %1
+
+|
+| Standard toolbox modules
+|
+RiscMovie_Ensure Toolbox 1.71 System:modules.toolbox.Toolbox MODTB
+RMENSURE Toolbox 1.71 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure Window 1.79 System:modules.toolbox.Window MODWD
+RMENSURE Window 1.79 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure Iconbar 1.22 System:modules.toolbox.Iconbar MODIB
+RMENSURE Iconbar 1.22 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure Menu 0.40 System:modules.toolbox.Menu MODMU
+RMENSURE Menu 0.40 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure ProgInfo 0.20 System:modules.toolbox.ProgInfo MODPI
+RMENSURE ProgInfo 0.20 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure Scale 0.19 System:modules.toolbox.Scale MODSC
+RMENSURE Scale 0.19 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure SaveAs 0.22 System:modules.toolbox.SaveAs MODSAVE
+RMENSURE SaveAs 0.22 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure FileInfo 0.22 System:modules.toolbox.FileInfo MODFI
+RMENSURE FileInfo 0.22 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure ToolAction 0.23 System:modules.toolbox.ToolAction MODTA
+RMENSURE ToolAction 0.23 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure ColourDBox 0.23 System:modules.toolbox.ColourDBox MODCD
+RMENSURE ColourDBox 0.23 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure ColourMenu 0.24 System:modules.toolbox.ColourMenu MODCM
+RMENSURE ColourMenu 0.24 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure DCS 1.16 System:modules.toolbox.DCS_Quit MODDCS
+RMENSURE DCS 1.16 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure FontDBox 0.22 System:modules.toolbox.FontDBox MODFB
+RMENSURE FontDBox 0.22 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure FontMenu 0.27 System:modules.toolbox.FontMenu MODFM
+RMENSURE FontMenu 0.27 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure PrintDBox 0.20 System:modules.toolbox.Toolbox MODPT
+RMENSURE PrintDBox 0.20 ERROR 0 <ReadToken$Value>
+
+RiscMovie_Ensure TextGadgets 0.49 System:modules.toolbox.Toolbox MODTG
+RMENSURE TextGadgets 0.49 ERROR 0 <ReadToken$Value>
+
+|
+| Cleanup
+|
+Unset Alias$RiscMovie_Ensure
+Unset ReadToken$Value

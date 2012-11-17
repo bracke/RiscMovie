@@ -1,0 +1,25 @@
+Run <Obey$Dir>.!Boot
+|
+Set File$Type_1bc Movies
+Set Alias$@RunType_1bc Run <RiscMovie$Dir>.!Run %%*0
+|
+RMEnsure UtilityModule 3.00 Run <RiscMovie$Dir>.Resources.ReadToken RiscMovieRes:Messages RO
+RMEnsure UtilityModule 3.00 ERROR 0 <ReadToken$Value>
+| 
+RMEnsure WindowManager 3.80 Run <RiscMovie$Dir>.Resources.ReadToken RiscMovieRes:Messages NESTED
+RMEnsure WindowManager 3.80 ERROR 0 <ReadToken$Value>
+|
+RMEnsure SharedCLibrary 0.01 System:modules.clib
+RMEnsure SharedCLibrary 0.01 Run <RiscMovie$Dir>.Resources.ReadToken RiscMovieRes:Messages MODCLIB
+RMEnsure SharedCLibrary 0.01 ERROR 0 <ReadToken$Value>
+|
+Run <RiscMovie$Dir>.!Toolbox
+|
+UnSet RiscMovie$Start_URI_Handler
+RMEnsure AcornURI 0.12 Set RiscMovie$Start_URI_Handler 1
+<RiscMovie$Dir>.Resources.IgnoreErr RMEnsure AcornURI 0.12 RMLoad System:Modules.Network.URI
+RMEnsure AcornURI 0.12 UnSet RiscMovie$Start_URI_Handler
+RMEnsure AcornURI 0.12 Run <RiscMovie$Dir>.Resources.ReadToken RiscMovieRes:Messages MODURI
+RMEnsure AcornURI 0.12 ERROR 0 <ReadToken$Value>
+|
+<RiscMovie$Dir>.Resources.MinSlot <RiscMovie$Dir>.!RunImage %0

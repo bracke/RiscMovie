@@ -1,0 +1,284 @@
+| RiscMovie Configure definitions
+
+Title = RiscMovie
+Width = 900
+Height = 350
+CheckVersion = 0.46
+File = <Choices$Write>.RiscMovie.Choices
+Separator = :
+Remark = #
+Boolean = 2
+
+[Menu]
+
+Icon = menu
+Text = Menu content.
+Width = 220
+
+{
+ Name = CATEGORY
+ Text = Genre
+ Type = String
+ Default = Action,Family,Documentary,Drama,Adventure,Farce,Historical,Comedy,Warmovie,Monumental,Science Fiction,Fantasy,Horror,Splatter,Comic,Thriller,Western,Undefined
+ Help = Which genres are possible ?
+}
+
+{
+ Name = MEDIA
+ Text = Media Type
+ Type = String
+ Default = DVD,DVD-RAM,Video-CD,Video,E60,E120,E180,E210,E240,E300,
+ Help = Which media types are possible?
+}
+
+{
+ Name = LANGUAGE
+ Text = Languages
+ Type = String
+ Default = English,German,French
+ Help = Possible languages.
+}
+
+{
+ Name = SUBTITLES
+ Text = Subtitles
+ Type = String
+ Default = English,German,French
+ Help = Possible subtitles.
+}
+
+[Liste]
+
+Icon = liste
+Text = List window - content
+Width = 220
+
+
+[Liste,1-3]
+
+Icon = 1-3
+Text = Column 1-3
+Width = 220
+
+{
+ Name = COLUMN1
+ Text = Show
+ Type = Option
+ Default = On
+ Help = Show this column.
+}
+{
+ Name = HEADING1
+ Text = Headline
+ Type = String
+ Width = 220
+ Default = Name
+ Enable = COLUMN1,1
+ Help =  Headline for this column.
+};
+{
+ Name = CONTENT1
+ Text = Content
+ Width = 220
+ Type = Menu
+ Menu = Content;First title,0;Second title,1;Third title,2;Genre,3;Media type,4;Language,5;Subtitles,6;Notes,7
+ Enable = COLUMN1,1
+ Default = 0
+}
+
+{
+ Name = COLUMN2
+ Text = Show
+ Type = Option
+ Default = On
+ Help = Show this column.
+}
+{
+ Name = HEADING2
+ Text = Headline
+ Type = String
+ Width = 220
+ Default = Name
+ Enable = COLUMN2,1
+ Help = Headline for this column
+};
+{
+ Name = CONTENT2
+ Text = Content
+ Type = Menu
+ Width = 220
+ Menu = Content;First title,0;Second title,1;Third title,2;Genre,3;Media type,4;Language,5;Subtitles,6;Notes,7
+ Enable = COLUMN2,1
+ Default = 1
+}
+
+
+{
+ Name = COLUMN3
+ Text = Show
+ Type = Option
+ Default = On
+ Help = Show this column.
+}
+{
+ Name = HEADING3
+ Text = Headline
+ Type = String
+ Width = 220
+ Default = Name
+ Enable = COLUMN3,1
+ Help = Headline for this column.
+};
+{
+ Name = CONTENT3
+ Text = Content
+ Type = Menu
+ Width = 220
+ Menu = Content;First title,0;Second title,1;Third title,2;Genre,3;Media type,4;Language,5;Subtitles,6;Notes,7
+ Enable = COLUMN3,1
+ Default = 2
+}
+
+[Liste,4-6]
+
+Icon = 4-6
+Text = Column 4-6
+Width = 220
+
+{
+ Name = COLUMN4
+ Text = Show
+ Type = Option
+ Default = On
+ Help = Show this column.
+}
+{
+ Name = HEADING4
+ Text = Headline
+ Type = String
+ Width = 220
+ Default = Genre
+ Enable = COLUMN4,1
+ Help = Overskrift til denne Column
+};
+{
+ Name = CONTENT4
+ Text = Content
+ Type = Menu
+ Width = 220
+ Menu = Content;First title,0;Second title,1;Third title,2;Genre,3;Media type,4;Language,5;Subtitles,6;Notes,7
+ Enable = COLUMN4,1
+ Default = 3
+}
+
+
+{
+ Name = COLUMN5
+ Text = Show
+ Type = Option
+ Default = On
+ Help = Show this column.
+}
+{
+ Name = HEADING5
+ Text = Headline
+ Type = String
+ Width = 220
+ Default = Medie
+ Enable = COLUMN5,1
+ Help = Headline for this column.
+};
+{
+ Name = CONTENT5
+ Text = Contents
+ Type = Menu
+ Width = 220
+ Menu = Content;First title,0;Second title,1;Third title,2;Genre,3;Media type,4;Language,5;Subtitles,6;Notes,7
+ Enable = COLUMN5,1
+ Default = 4
+}
+
+
+{
+ Name = COLUMN6
+ Text = Show
+ Type = Option
+ Default = On
+ Help = Show this column.
+}
+{
+ Name = HEADING6
+ Text = Headline
+ Type = String
+ Width = 220
+ Default = Sprog
+ Enable = COLUMN6,1
+ Help = Headline for this column.
+};
+{
+ Name = CONTENT6
+ Text = Content
+ Type = Menu
+ Width = 220
+ Menu = Content;First title,0;Second title,1;Third title,2;Genre,3;Media type,4;Language,5;Subtitles,6;Notes,7
+ Enable = COLUMN6,1
+ Default = 5
+}
+
+[Liste,7-8]
+
+Icon = 7-8
+Text = Column 7-8
+Width = 220
+
+{
+ Name = COLUMN7
+ Text = Show
+ Type = Option
+ Default = On
+ Help = Show this column.
+}
+{
+ Name = HEADING7
+ Text = Headline
+ Type = String
+ Width = 220
+ Default = Subtitels
+ Enable = COLUMN7,1
+ Help = Headline for this column.
+};
+{
+ Name = CONTENT7
+ Text = Indhold
+ Type = Menu
+ Width = 220
+ Menu = Content;First title,0;Second title,1;Third title,2;Genre,3;Media type,4;Language,5;Subtitles,6;Notes,7
+ Enable = COLUMN7,1
+ Default = 6
+}
+
+{
+ Name = COLUMN8
+ Text = Show
+ Type = Option
+ Default = On
+ Help = Show this column.
+}
+{
+ Name = HEADING8
+ Text = Headline
+ Type = String
+ Width = 220
+ Default = Tekst
+ Enable = COLUMN8,1
+ Help = Headline for this column.
+};
+{
+ Name = CONTENT8
+ Text = Content
+ Type = Menu
+ Width = 220
+ Menu = Content;First title,0;Second title,1;Third title,2;Genre,3;Media type,4;Language,5;Subtitles,6;Notes,7
+ Enable = COLUMN8,1
+ Default = 7
+}

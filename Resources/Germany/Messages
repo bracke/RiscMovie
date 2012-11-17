@@ -1,0 +1,80 @@
+# StrongEd$Mode=Message
+_TaskName:RiscMovie
+VERS:1.00 (2005-05-22)
+# Fehler Meldungen für die 'Obey' Dateien
+DESCRIPTION:Keep track of your movie collection
+RESERR:Meldung von RiscMovie
+RO:RiscMovie benötigt RISC OS 3.
+TASKEXIST:RiscMovie läuft schon.
+NESTED:Der Windowmanager ist zu alt (< 3.80).
+MODCLIB:Das Modul 'SharedCLibrary' ist für Drone erforderlich.
+CONFIX:ConfiX konnte nicht gefunden werden.
+MODTB:Das Modul 'Toolbox' (V1.71) ist für RiscMovie erforderlich.
+MODWD:Das Modul 'Window' (V1.79) ist für RiscMovie erforderlich.
+MODIB:Das Modul 'IconBar' (V1.22) ist für RiscMovie erforderlich.
+MODMU:Das Modul 'Menu' (V0.40) ist für RiscMovie erforderlich.
+MODPI:Das Modul 'ProgInfo' (V0.20) ist für RiscMovie erforderlich.
+MODSC:Das Modul 'Scale' (V0.19) ist für RiscMovie erforderlich.
+MODSAVE:Das Modul 'SaveAs' (V0.22) ist für RiscMovie erforderlich.
+MODFI:Das Modul 'FileInfo' (V0.22) ist für RiscMovie erforderlich.
+MODTA:Das Modul 'ToolAction' (V0.23) ist für RiscMovie erforderlich.
+MODCD:Das Modul 'ColourDBox' (V0.23) ist für RiscMovie erforderlich.
+MODCM:Das Modul 'ColourMenu' (V0.24) ist für RiscMovie erforderlich.
+MODDCS:Das Modul 'DCS' (V1.16) ist für RiscMovie erforderlich.
+MODFB:Das Modul 'FontDBox' (V0.22) ist für RiscMovie erforderlich.
+MODFM:Das Modul 'FontMenu' (V0.27) ist für RiscMovie erforderlich.
+MODPT:Das Modul 'PrintDBox' (V0.20) ist für RiscMovie erforderlich.
+MODTG:Das Modul 'TextGadgets' (V0.49) ist für RiscMovie erforderlich.
+MODURI:Das Modul 'URI' ist für RiscMovie erforderlich.
+MODTW:Das Modul 'TaskWindow' ist für Drone erforderlich.
+# Fehler Meldungen
+OVERWRITEBUTTON:überschreiben
+OVERWRITEMODE:Es gibt schon eine Datei mit diesem Namen.
+UNTRAPPED:Unbekannter Fehler. %0
+CHOICES:Fehler beim lesen der Konfiguration. %0
+CONFIGURE:Fehler beim starten von !ConfiX. %0
+TOOLBOXERROR:Fehler beim bearbeiten eines Toolbox Fehler. %0
+BUGZQUERY:Fehler beim bearbeiten einer Anfrage von der Bugz Applikation. %0
+BUGZCREATE:Fehler beim Erstellen der Bugz Fehlermeldung. %0
+NOBUGZ:Die Bugz Applikation konnte nicht gefunden werden. %0
+HOMEPAGE:Fehler beim öffnen der Homepage. %0
+SENDEMAIL:Fehler beim verschicken der E-Mail. %0
+MQUIT:Fehler beim Empfang der 'Quit' Message. %0
+TQUIT:Fehler beim Empfang der Toolbox 'Quit' Message. %0
+VIEWMANUAL:Fehler beim öffnen des Handbuchs. %0
+VIEWIHELP:Fehler beim starten der interaktiven Hilfe. %0
+VIEWCHAPTER:Fehler beim öffnen eines Kapitels im Handbuch. %0
+#
+UNTITLED:Namenlos
+DELENTRY:Wirklich die gewählten Filme löschen ?
+DELBUTTON:Löschen
+NORESULT:Die Suche war erfolglos.
+NODUBLETTE:Kein Film ist zweimal vorhanden.
+HANDLE_FIND:Fehler während der Suche - %0
+HANDLE_DUBLETTE:Fehler beim suchen nach Kopien - %0
+HAND_SORT:Fehler beim sortieren - %0
+HANDLE_NEWLIST:Fehler beim öffnen einer neuen Datenbank - %0
+HANDLE_DCSDISCARD:Fehler nach einem DCS discard - %0
+HANDLE_DCSSAVE:Fehler nach einem DCS save - %0
+HANDLE_DCSCANCEL:Fehler nach einem DCS cancel - %0
+HANDLE_READERROR:Fehler beim laden der Datei. %0
+HANDLE_SCROLLIST:Fehler bei der Scrolllist Selektierung - %0
+HANDLE_SAVETOFILE:Fehler beim 'save_to_file' - %0
+HANDLE_SAVECOMPLETED:Fehler beim 'save_completed' - %0
+HANDLE_CLOSEWINDOW:Fehler beim schliessen eines Fensters - %0
+HANDLE_MENUSELECTION:Fehler beim Klicken im Menü - %0
+HANDLE_HIDEWINDOW:Fehler beim 'Verstecken' eines Fensters - %0
+HANDLE_SHOWSAVEAS:Fehler beim anzeigen eines SaveAs Fensters - %0
+HANDLE_SHOWWINDOW:Fehler beim anzeigen eines Fensters - %0
+HANDLE_SHOWFILEINFO:Fehler beim anzeigen eines FileInfo Fensters - %0
+HANDLE_REMOVEITEM:Fehler beim løschen eines Filmes - %0
+HANDLE_ADDITEM:Fehler beim hinzufügen eines Filmes - %0
+HANDLE_EDITITEM:Fehler beim ändern eines Filmes - %0
+HANDLE_OADDITEM:Fehler beim öffnen des 'Film hinzufügen' Fensters - %0
+HANDLE_CHANGEITEM:Fehler beim ändern eines Fensters - %0
+HANDLE_PREQUIT:Fehler beim Empfang vom 'PreQuit' - %0.
+HANDLE_CSVREAD:Fehler beim laden der CSV Daten - %0.
+HANDLE_SAVECSV:Fehler beim speichern der CSV Daten - %0.
+NOCHOICES:Die Einstellungen wurden nicht gefunden - %0.
+PROGRESS_HEADER:Lade Datei...
+BADDATA:Einige inkonsistente Daten wurden ignoriert.

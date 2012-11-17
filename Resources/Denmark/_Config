@@ -1,0 +1,283 @@
+| RiscMovie Configure definitions
+
+Title = RiscMovie
+Width = 900
+Height = 350
+CheckVersion = 0.46
+File = <Choices$Write>.RiscMovie.Choices
+Separator = :
+Remark = #
+Boolean = 2
+
+[Menu]
+
+Icon = menu
+Text = Menu valgmuligheder
+Width = 220
+
+{
+ Name = CATEGORY
+ Text = Filmtyper
+ Type = String
+ Default = Action,Børnefilm,Dokumentar,Drama,Eventyr,Farce,Historisk,Komedie,Kriminal,Krigsfilm,Kærlighed,Monumental,Science Fiction,Skræk,Splatter,Tegnefilm,Thriller,Western,Udefineret
+ Help = Mulige filmtyper.
+}
+
+{
+ Name = MEDIA
+ Text = Medie
+ Type = String
+ Default = DVD,DVD-RAM,Video-CD,Købevideo,E60,E120,E180,E210,E240,E300,
+ Help = Mulige medier.
+}
+
+{
+ Name = LANGUAGE
+ Text = Sprog
+ Type = String
+ Default = Dansk,Tysk,Engelsk
+ Help = Mulige sprog.
+}
+
+{
+ Name = SUBTITLES
+ Text = Undertekster
+ Type = String
+ Default = Dansk,Tysk,Engelsk
+ Help = Mulige undertekster.
+}
+
+[Liste]
+
+Icon = liste
+Text = Liste vindue - indhold
+Width = 220
+
+[Liste,1-3]
+
+Icon = 1-3
+Text = søjle 1-3
+Width = 220
+
+{
+ Name = COLUMN1
+ Text = Vis
+ Type = Option
+ Default = On
+ Help = Vis denne søjle.
+}
+{
+ Name = HEADING1
+ Text = Overskrift
+ Type = String
+ Width = 220
+ Default = Navn
+ Enable = COLUMN1,1
+ Help = Overskrift til denne søjle
+};
+{
+ Name = CONTENT1
+ Text = Indhold
+ Width = 220
+ Type = Menu
+ Menu = Indhold;Første titel,0;Anden titel,1;Tredje titel,2;Filmtype,3;Medie,4;Sprog,5;Tekst,6;Noter,7
+ Enable = COLUMN1,1
+ Default = 0
+}
+
+{
+ Name = COLUMN2
+ Text = Vis
+ Type = Option
+ Default = On
+ Help = Vis denne søjle.
+}
+{
+ Name = HEADING2
+ Text = Overskrift
+ Type = String
+ Width = 220
+ Default = Navn
+ Enable = COLUMN2,1
+ Help = Overskrift til denne søjle
+};
+{
+ Name = CONTENT2
+ Text = Indhold
+ Type = Menu
+ Width = 220
+ Menu = Indhold;Første titel,0;Anden titel,1;Tredje titel,2;Filmtype,3;Medie,4;Sprog,5;Tekst,6;Noter,7
+ Enable = COLUMN2,1
+ Default = 1
+}
+
+
+{
+ Name = COLUMN3
+ Text = Vis
+ Type = Option
+ Default = On
+ Help = Vis denne søjle.
+}
+{
+ Name = HEADING3
+ Text = Overskrift
+ Type = String
+ Width = 220
+ Default = Navn
+ Enable = COLUMN3,1
+ Help = Overskrift til denne søjle
+};
+{
+ Name = CONTENT3
+ Text = Indhold
+ Type = Menu
+ Width = 220
+ Menu = Indhold;Første titel,0;Anden titel,1;Tredje titel,2;Filmtype,3;Medie,4;Sprog,5;Tekst,6;Noter,7
+ Enable = COLUMN3,1
+ Default = 2
+}
+
+[Liste,4-6]
+
+Icon = 4-6
+Text = søjle 4-6
+Width = 220
+
+{
+ Name = COLUMN4
+ Text = Vis
+ Type = Option
+ Default = On
+ Help = Vis denne søjle.
+}
+{
+ Name = HEADING4
+ Text = Overskrift
+ Type = String
+ Width = 220
+ Default = Type
+ Enable = COLUMN4,1
+ Help = Overskrift til denne søjle
+};
+{
+ Name = CONTENT4
+ Text = Indhold
+ Type = Menu
+ Width = 220
+ Menu = Indhold;Første titel,0;Anden titel,1;Tredje titel,2;Filmtype,3;Medie,4;Sprog,5;Tekst,6;Noter,7
+ Enable = COLUMN4,1
+ Default = 3
+}
+
+
+{
+ Name = COLUMN5
+ Text = Vis
+ Type = Option
+ Default = On
+ Help = Vis denne søjle.
+}
+{
+ Name = HEADING5
+ Text = Overskrift
+ Type = String
+ Width = 220
+ Default = Medie
+ Enable = COLUMN5,1
+ Help = Overskrift til denne søjle
+};
+{
+ Name = CONTENT5
+ Text = Indhold
+ Type = Menu
+ Width = 220
+ Menu = Indhold;Første titel,0;Anden titel,1;Tredje titel,2;Filmtype,3;Medie,4;Sprog,5;Tekst,6;Noter,7
+ Enable = COLUMN5,1
+ Default = 4
+}
+
+
+{
+ Name = COLUMN6
+ Text = Vis
+ Type = Option
+ Default = On
+ Help = Vis denne søjle.
+}
+{
+ Name = HEADING6
+ Text = Overskrift
+ Type = String
+ Width = 220
+ Default = Sprog
+ Enable = COLUMN6,1
+ Help = Overskrift til denne søjle
+};
+{
+ Name = CONTENT6
+ Text = Indhold
+ Type = Menu
+ Width = 220
+ Menu = Indhold;Første titel,0;Anden titel,1;Tredje titel,2;Filmtype,3;Medie,4;Sprog,5;Tekst,6;Noter,7
+ Enable = COLUMN6,1
+ Default = 5
+}
+
+[Liste,7-8]
+
+Icon = 7-8
+Text = søjle 7-8
+Width = 220
+
+{
+ Name = COLUMN7
+ Text = Vis
+ Type = Option
+ Default = On
+ Help = Vis denne søjle.
+}
+{
+ Name = HEADING7
+ Text = Overskrift
+ Type = String
+ Width = 220
+ Default = Tekst
+ Enable = COLUMN7,1
+ Help = Overskrift til denne søjle
+};
+{
+ Name = CONTENT7
+ Text = Indhold
+ Type = Menu
+ Width = 220
+ Menu = Indhold;Første titel,0;Anden titel,1;Tredje titel,2;Filmtype,3;Medie,4;Sprog,5;Tekst,6;Noter,7
+ Enable = COLUMN7,1
+ Default = 6
+}
+
+{
+ Name = COLUMN8
+ Text = Vis
+ Type = Option
+ Default = On
+ Help = Vis denne søjle.
+}
+{
+ Name = HEADING8
+ Text = Overskrift
+ Type = String
+ Width = 220
+ Default = Tekst
+ Enable = COLUMN8,1
+ Help = Overskrift til denne søjle
+};
+{
+ Name = CONTENT8
+ Text = Indhold
+ Type = Menu
+ Width = 220
+ Menu = Indhold;Første titel,0;Anden titel,1;Tredje titel,2;Filmtype,3;Medie,4;Sprog,5;Tekst,6;Noter,7
+ Enable = COLUMN8,1
+ Default = 7
+}
